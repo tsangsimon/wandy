@@ -1,0 +1,14 @@
+language: python
+python:
+- '3.4'
+install:
+- pip install -r requirements.txt
+env:
+- SETTINGS=config.TestConfig
+deploy:
+  provider: heroku
+  api_key:
+   secure: RGMip9yEwZna1+nSVvhjHykZzBxunMNP9+XKZ11ILwM0+u65oOV30yGt7m+xpGnRL/WZGDLC1MOI558xhQ14N+tb51mDr2fn0qoOC4xpgiHMkzqae1jgkB+o2a+DIkGVAokJxfyGoNuGIPJ+OzDiND3mncGjm59L/eYPHlBLMvM=
+  on:
+    repo: tsangsimon/wandy
+    branch: master
